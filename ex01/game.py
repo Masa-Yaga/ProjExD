@@ -1,11 +1,14 @@
 import random
+import datetime
 
+NUM_OF_TRIALS = 5
 NUM_OF_ALL_CHARAS = 10
+NUM_OF_ABS_CHARAS = 2
 
 
 def main():
     st = datetime.datetime.now()
-    for _ in range():
+    for _ in range(NUM_OF_TRIALS):
         seikai = shutudai()
         f = kaitou(seikai)
         if f == 1:
@@ -27,7 +30,7 @@ def shutudai():
 
 def kaitou(seikai):
     num = list(imput("欠損文字はいくつあるでしょうか？"))
-    if num == NUM_OF_ALL_CHARAS:
+    if num == NUM_OF_ABS_CHARAS:
         print("不正解です.")
         print("_")
         return 0
