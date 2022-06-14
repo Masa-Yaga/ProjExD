@@ -4,7 +4,7 @@ def main():
     mon = shutudai()
     kaitou(mon)
 
-def shutudai():
+def shutsudai():
     q = {}
     q[0] = ("サザエの旦那の名前は？", "マスオ", "ますお")
     q[1] = ("カツオの妹の名前は？", "ワカメ", "わかめ")
