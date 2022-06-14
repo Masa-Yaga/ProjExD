@@ -7,6 +7,9 @@ def main():
     st = datetime.datetime.now()
     for _ in range():
         seikai = shutudai()
+        f = kaitou(seikai)
+        if f == 1:
+            break
         #kaitou(seikai)
     ed = datetime.datetime.now()
     print("((ed-st).second)秒かかりました")
@@ -26,7 +29,8 @@ def kaitou(seikai):
     num = list(imput("欠損文字はいくつあるでしょうか？"))
     if num == NUM_OF_ALL_CHARAS:
         print("不正解です.")
-        return 
+        print("_")
+        return 0
     else:
         print("正解です　それでは具体的に欠損文字を1つずつ入力してください")
         for i in range(NUM_OF_ALL_CHARAS)
