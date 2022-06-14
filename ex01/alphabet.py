@@ -29,17 +29,20 @@ def shutudai():
     return all_chara_list
 
 def kaitou(seikai):
-    num = list(imput("欠損文字はいくつあるでしょうか？"))
-    if num == kesson:
-        print("不正解です.")
-        print("_")
-        return 0
+    ans_kesson = input("欠損文字はいくつあるでしょうか？：")
+    if ans_kesson == str(kesson):
+        print("正解です。それでは、具体的に欠損文字を1つずつ入力してください")
     else:
-        print("正解です　それでは具体的に欠損文字を1つずつ入力してください")
-        for i in range(taishou)
-        c = input("(i+1)つ目の文字を入力してください")
-        if c 
+        print("不正解です。またのご利用をお待ちしております。")
+        return 0
 
+    for i in range(kesson):
+        answer = input(f"{i+1}個めの文字を入力してください：")
+        if answer.upper() not in seikai:
+            print("不正解です。またのご利用お待ちしております。")
+            return 0
+        else:
+            seikai.remove(answer.upper())
 if __name__ == "__main__":
     main()
 
