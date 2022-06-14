@@ -30,3 +30,5 @@ def kaitou(seikai):
 
 if __name__ == "__main__":
     main()
+
+#分からない場所ばっかなので、ご指摘お願いします
