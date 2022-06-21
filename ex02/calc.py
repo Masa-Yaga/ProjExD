@@ -20,7 +20,7 @@ def button_click(event):   #クリックしたときの処理
     else:
         entry.insert(tk.END, x)
 
-def button_color(event):
+def button_color(event):  #マウスオンの処理
     btn = tk.Button(bg = "gray")
 
 
