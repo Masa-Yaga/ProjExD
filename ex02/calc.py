@@ -20,7 +20,7 @@ if __name__ == "__main__":
     entry.grid(row=0, column=0, columnspan=3)
     
     r, c = 1, 0
-    for x in range(9, -1, -1):
+    for i, x in enumerate([i for i in range(9, -1, -1)]+["+"]):
         btn = tk.Button(root, 
                        text=f"{x}", 
                         width=4, 
@@ -30,7 +30,7 @@ if __name__ == "__main__":
         btn.bind("<1>", button_click)
         btn.grid(row=r, column=c)
         c += 1
-        if (x-1)%3 == 0:
+        if (i+1)%3 == 0:
             r += 1
             c = 0
 
