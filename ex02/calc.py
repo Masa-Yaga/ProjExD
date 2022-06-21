@@ -1,4 +1,10 @@
 import tkinter as tk
+import tkinter.messagebox as tkm
+
+def button_click(event):
+    btn = event.widget
+    num = btn["text"]
+    tkm.showinfo("", f"{x}のボタンがクリックされました")
 
 if __name__ == "__main__":
     root = tk.Tk()
@@ -13,11 +19,14 @@ if __name__ == "__main__":
                         height=2, 
                         font=("Times New Roman", 30), 
                     )
+        btn.bind("<1>", button_click)
         btn.grid(row=r, column=c)
         c += 1
         if (x-1)%3 == 0:
             r += 1
             c = 0
+
+        
 
     
     root.mainloop()
