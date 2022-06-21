@@ -5,12 +5,19 @@ if __name__ == "__main__":
     root.geometry("300x500")
     root.title("電卓")
     
-    btn = tk.Button(root, 
-                    text="9", 
-                    width=4, 
-                    height=2, 
-                    font=("Times New Roman", 30), 
+    r, c = 0, 0
+    for x in range(9, -1, -1):
+        btn = tk.Button(root, 
+                       text=f"{x}", 
+                        width=4, 
+                        height=2, 
+                        font=("Times New Roman", 30), 
                     )
-    btn.grid(row=0, column=0)
- 
+        btn.grid(row=r, column=c)
+        c += 1
+        if (x-1)%3 == 0:
+            r += 1
+            c = 0
+
+    
     root.mainloop()
