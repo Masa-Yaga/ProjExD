@@ -10,6 +10,13 @@ def button_click(event):
         print(ans)
         entry.delete(0, tk.END)
         entry.insert(tk.END, ans)
+    elif x == "d":
+        if ans:
+            pass
+        else:
+            entry.delete(0, 1)
+    elif x == "r":
+        entry.delete(0, tk.END)
     else:
         entry.insert(tk.END, x)
 
@@ -27,7 +34,8 @@ if __name__ == "__main__":
     entry.grid(row=0, column=0, columnspan=3)
     
     r, c = 1, 0
-    for i, x in enumerate([9, 8, 7, 6, 5, 4, 3, 2, 1, 0, "+", "="]):
+    for i, x in enumerate([7, 8, 9, "/", 4, 5, 6, "*", 1, 2, 
+                        3, "-", 0, ".", "+", "=", "d", "r"]):
         btn = tk.Button(root, 
                        text=f"{x}", 
                         width=4, 
@@ -37,7 +45,7 @@ if __name__ == "__main__":
         btn.bind("<1>", button_click)
         btn.grid(row=r, column=c)
         c += 1
-        if (i+1)%3 == 0:
+        if (i+1)%4 == 0:
             r += 1
             c = 0
 
