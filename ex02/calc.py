@@ -48,7 +48,7 @@ if __name__ == "__main__":
         btn.bind("<Enter>", button_color)  #マウスオンしたら色が変わる(なぜか変わらない)
         btn.grid(row=r, column=c)
         c += 1
-        if (i+1)%4 == 0:
+        if (i+1)%4 == 0:   #4列にしたかったので、4列できるようにした(小泉構文)
             r += 1
             c = 0
 
