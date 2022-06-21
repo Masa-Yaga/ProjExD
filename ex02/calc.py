@@ -3,8 +3,15 @@ import tkinter.messagebox as tkm
 
 def button_click(event):
     btn = event.widget
-    num = btn["text"]
-    entry.insert(tk.END, x)
+    x = btn["text"]
+    if x == "=":
+        eqn = entry.get()
+        ans = eval(eqn)
+        print(ans)
+        entry.delete(0, tk.END)
+        entry.insert(tk.END, ans)
+    else:
+        entry.insert(tk.END, x)
 
 
 
@@ -20,7 +27,7 @@ if __name__ == "__main__":
     entry.grid(row=0, column=0, columnspan=3)
     
     r, c = 1, 0
-    for i, x in enumerate([i for i in range(9, -1, -1)]+["+"]):
+    for i, x in enumerate([9, 8, 7, 6, 5, 4, 3, 2, 1, 0, "+", "="]):
         btn = tk.Button(root, 
                        text=f"{x}", 
                         width=4, 
